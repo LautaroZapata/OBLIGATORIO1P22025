@@ -1,0 +1,12 @@
+C:\Development\OBLIGATORIO1P22025\Dominio\bin\Debug\net8.0\Dominio.deps.json
+C:\Development\OBLIGATORIO1P22025\Dominio\bin\Debug\net8.0\Dominio.dll
+C:\Development\OBLIGATORIO1P22025\Dominio\bin\Debug\net8.0\Dominio.pdb
+C:\Development\OBLIGATORIO1P22025\Dominio\obj\Debug\net8.0\Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Development\OBLIGATORIO1P22025\Dominio\obj\Debug\net8.0\Dominio.AssemblyInfoInputs.cache
+C:\Development\OBLIGATORIO1P22025\Dominio\obj\Debug\net8.0\Dominio.AssemblyInfo.cs
+C:\Development\OBLIGATORIO1P22025\Dominio\obj\Debug\net8.0\Dominio.csproj.CoreCompileInputs.cache
+C:\Development\OBLIGATORIO1P22025\Dominio\obj\Debug\net8.0\Dominio.sourcelink.json
+C:\Development\OBLIGATORIO1P22025\Dominio\obj\Debug\net8.0\Dominio.dll
+C:\Development\OBLIGATORIO1P22025\Dominio\obj\Debug\net8.0\refint\Dominio.dll
+C:\Development\OBLIGATORIO1P22025\Dominio\obj\Debug\net8.0\Dominio.pdb
+C:\Development\OBLIGATORIO1P22025\Dominio\obj\Debug\net8.0\ref\Dominio.dll

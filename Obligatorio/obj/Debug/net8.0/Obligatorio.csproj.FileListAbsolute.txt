@@ -13,3 +13,7 @@ C:\Development\OBLIGATORIO1P22025\Obligatorio\obj\Debug\net8.0\refint\Obligatori
 C:\Development\OBLIGATORIO1P22025\Obligatorio\obj\Debug\net8.0\Obligatorio.pdb
 C:\Development\OBLIGATORIO1P22025\Obligatorio\obj\Debug\net8.0\Obligatorio.genruntimeconfig.cache
 C:\Development\OBLIGATORIO1P22025\Obligatorio\obj\Debug\net8.0\ref\Obligatorio.dll
+C:\Development\OBLIGATORIO1P22025\Obligatorio\bin\Debug\net8.0\Dominio.dll
+C:\Development\OBLIGATORIO1P22025\Obligatorio\bin\Debug\net8.0\Dominio.pdb
+C:\Development\OBLIGATORIO1P22025\Obligatorio\obj\Debug\net8.0\Obligatorio.csproj.AssemblyReference.cache
+C:\Development\OBLIGATORIO1P22025\Obligatorio\obj\Debug\net8.0\Obligato.47458B9C.Up2Date

@@ -33,6 +33,32 @@ namespace Dominio
             CostoOperacionKm = costoOperacionKm;
         }
 
+        public void Validar()
+        {
+            ValidarFabricante();
+            ValidarModelo();
+            ValidarAsientos();
+            ValidarAlcance();
+            //CostoOperacionKm;
+        }
 
+        public void ValidarFabricante()
+        {
+            if (string.IsNullOrEmpty(fabricante)) throw new Exception("El fabricante no puede ser vacio");
+        }
+
+        public void ValidarModelo()
+        {
+            if (string.IsNullOrEmpty(modelo)) throw new Exception("El modelo no puede ser vacio");
+        }
+
+        public void ValidarAsientos()
+        {
+            if (cantAsientos < 1 ) throw new Exception("La cantidad de asientos no puede ser menor a 1");
+        }
+        public void ValidarAlcance()
+        {
+            if (alcance < 1) throw new Exception("El alcance del avion no puede ser menor a 1KM");
+        }
     }
 }

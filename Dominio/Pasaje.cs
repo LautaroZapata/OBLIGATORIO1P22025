@@ -40,5 +40,15 @@ namespace Dominio
         {
             Id = ++ultimoId;
         }
+
+        public void Validar()
+        {
+            //ValidarFechaConFrecuencia();
+            //ValidarPasajero();
+            //ValidarEquipaje();
+            //ValidarPrecio();
+        }
+
+
     }
 }

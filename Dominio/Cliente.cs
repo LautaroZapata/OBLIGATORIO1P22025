@@ -6,29 +6,23 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    public class Cliente : Usuario
+    public abstract class Cliente : Usuario
     {
         string documento;
         string nombre;
-        string mail;
-        string password;
         string nacionalidad;
 
         public string Documento { get => documento; set => documento = value; }
         public string Nombre { get => nombre; set => nombre = value; }
-        public string Mail { get => mail; set => mail = value; }
-        public string Password { get => password; set => password = value; }
         public string Nacionalidad { get => nacionalidad; set => nacionalidad = value; }
         public Cliente()
         {
         }
 
-        public Cliente(string documento, string nombre, string mail, string password, string nacionalidad)
+        public Cliente(string documento, string nombre, string nacionalidad, string mail, string password) : base(mail,password)
         {
             Documento = documento;
             Nombre = nombre;
-            Mail = mail;
-            Password = password;
             Nacionalidad = nacionalidad;
         }
     }

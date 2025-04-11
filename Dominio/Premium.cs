@@ -16,7 +16,7 @@ namespace Dominio
         {
         }
 
-        public Premium(int puntos)
+        public Premium(int puntos, string documento, string nombre, string mail, string password, string nacionalidad ): base(documento, nombre, mail, password, nacionalidad)
         {
             Puntos = puntos;
         }

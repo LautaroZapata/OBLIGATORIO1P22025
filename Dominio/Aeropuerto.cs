@@ -29,5 +29,26 @@ namespace Dominio
         public Aeropuerto()
         {
         }
+
+        public void Validar()
+        {
+            ValidarCodigoIata(codigoIata);
+            ValidarCiudad();
+        }
+
+        public void ValidarCodigoIata(string codigoIata)
+        {
+            if (string.IsNullOrEmpty(codigoIata)) throw new Exception("El codigo IATA no puede ser vacio");
+            if (codigoIata.Length != 3) throw new Exception("El codigo IATA debe ser de 3 letras");
+            foreach (char letra in codigoIata)
+            {
+                if (!char.IsLetter(letra))
+                    throw new Exception("El código IATA solo puede contener letras");
+            }
+        }
+        public void ValidarCiudad()
+        {
+            if (string.IsNullOrEmpty(ciudad)) throw new Exception("La ciudad no puede ser vacia");
+        }
     }
 }
