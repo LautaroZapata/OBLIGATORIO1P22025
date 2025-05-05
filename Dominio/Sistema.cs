@@ -28,14 +28,14 @@ namespace Dominio
         private Sistema() 
         {
             // PRECARGA DE DATOS VA ACA ADENTRO
-            //AgregarVuelo("AB1234");
+            AgregarVuelo("AB1234",);
 
         }
 
         // METODOS
 
         #region Vuelo
-        public void AgregarVuelo(string nroVuelo, Ruta ruta, Avion avion, List<DayOfWeek> frecuencia)
+        public void AgregarVuelo(string nroVuelo, Aeropuerto aeropuertoSalida, Aeropuerto aeropuertoLlegada, Avion avion, List<DayOfWeek> frecuencia)
         {
             try
             {
@@ -43,6 +43,7 @@ namespace Dominio
                 vuelo.Validar();
                 ExisteVuelo(nroVuelo);
                 ExisteAvion(avion);
+                //ExisteRuta(aeropuertoSalida,aeropuertoLlegada);
                 listaVuelos.Add(vuelo);
 
             }
@@ -64,9 +65,37 @@ namespace Dominio
                 if (unVuelo.NroVuelo.ToUpper() == nroVuelo.ToUpper()) throw new Exception("El vuelo ya existe");
             }
         }
+
+        //public Ruta ExisteRuta(Aeropuerto aeropuertoSalida, Aeropuerto aeropuertoLlegada)
+        //{
+        //    // Como agregar la ruta al vuelo por parametro. Le pasamos directamente una ruta o los aeropuertos?
+        //}
         #endregion
 
+        #region Pasaje
+        public void AgregarPasaje(Vuelo vuelo, DateTime fecha, Cliente pasajero, Equipaje equipaje, decimal precio)
+        {
+            try
+            {
+                Pasaje pasaje = new Pasaje(vuelo, fecha, pasajero, equipaje, precio);
+                pasaje.Validar();
+                ValidarPasajero(pasajero);
+                // CalcularPrecioPasaje() iría en este momento antes de la emision del pasaje.
+                listaPasajes.Add(pasaje);
 
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+        public void ValidarPasajero(Cliente pasajero)
+        {
+            if (!listaUsuarios.Contains(pasajero)) throw new Exception("No existe el usuario");
+        }
+        #endregion
+        
 
     }
 }

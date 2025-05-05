@@ -50,5 +50,9 @@ namespace Dominio
         {
             if (string.IsNullOrEmpty(ciudad)) throw new Exception("La ciudad no puede ser vacia");
         }
+        public override bool Equals(object? obj)
+        {
+            return obj is Aeropuerto aeropuerto && this.ciudad == aeropuerto.ciudad;
+        }
     }
 }

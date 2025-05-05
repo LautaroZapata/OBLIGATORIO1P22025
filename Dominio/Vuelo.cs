@@ -72,6 +72,7 @@ namespace Dominio
         {
             if (frecuencia.Count == 0) throw new Exception("La frecuencia del vuelo debe ser como minimo 1 vez a la semana.");
         }
+        
 
         
     }

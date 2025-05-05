@@ -3,23 +3,20 @@
   "WorkspaceRootPath": "C:\\Development\\OBLIGATORIO1P22025\\Obligatorio\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6EF3569D-F78D-4EEE-B3D3-C33253154829}|..\\Dominio\\Dominio.csproj|c:\\development\\obligatorio1p22025\\dominio\\pasaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EF3569D-F78D-4EEE-B3D3-C33253154829}|..\\Dominio\\Dominio.csproj|c:\\development\\obligatorio1p22025\\dominio\\vuelo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A0C794DF-A9A5-418E-96D8-AAD0CBCF9216}|Obligatorio.csproj|c:\\development\\obligatorio1p22025\\obligatorio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0C794DF-A9A5-418E-96D8-AAD0CBCF9216}|Obligatorio.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{6EF3569D-F78D-4EEE-B3D3-C33253154829}|..\\Dominio\\Dominio.csproj|c:\\development\\obligatorio1p22025\\dominio\\equipaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6EF3569D-F78D-4EEE-B3D3-C33253154829}|..\\Dominio\\Dominio.csproj|c:\\development\\obligatorio1p22025\\dominio\\sistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EF3569D-F78D-4EEE-B3D3-C33253154829}|..\\Dominio\\Dominio.csproj|c:\\development\\obligatorio1p22025\\dominio\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EF3569D-F78D-4EEE-B3D3-C33253154829}|..\\Dominio\\Dominio.csproj|c:\\development\\obligatorio1p22025\\dominio\\premium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EF3569D-F78D-4EEE-B3D3-C33253154829}|..\\Dominio\\Dominio.csproj|c:\\development\\obligatorio1p22025\\dominio\\ocacionales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EF3569D-F78D-4EEE-B3D3-C33253154829}|..\\Dominio\\Dominio.csproj|c:\\development\\obligatorio1p22025\\dominio\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,84 +26,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Vuelo.cs",
+              "DocumentMoniker": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Vuelo.cs",
+              "RelativeDocumentMoniker": "..\\Dominio\\Vuelo.cs",
+              "ToolTip": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Vuelo.cs",
+              "RelativeToolTip": "..\\Dominio\\Vuelo.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAuwEsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T01:25:09.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Equipaje.cs",
+              "DocumentMoniker": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Equipaje.cs",
+              "RelativeDocumentMoniker": "..\\Dominio\\Equipaje.cs",
+              "ToolTip": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Equipaje.cs",
+              "RelativeToolTip": "..\\Dominio\\Equipaje.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T01:22:57.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Pasaje.cs",
+              "DocumentMoniker": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Pasaje.cs",
+              "RelativeDocumentMoniker": "..\\Dominio\\Pasaje.cs",
+              "ToolTip": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Pasaje.cs",
+              "RelativeToolTip": "..\\Dominio\\Pasaje.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T01:10:40.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Development\\OBLIGATORIO1P22025\\Obligatorio\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Development\\OBLIGATORIO1P22025\\Obligatorio\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-10T23:19:12.604Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Sistema.cs",
               "DocumentMoniker": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Sistema.cs",
               "RelativeDocumentMoniker": "..\\Dominio\\Sistema.cs",
               "ToolTip": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Sistema.cs",
               "RelativeToolTip": "..\\Dominio\\Sistema.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAkwDUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-10T23:16:37.41Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Usuario.cs",
-              "RelativeDocumentMoniker": "..\\Dominio\\Usuario.cs",
-              "ToolTip": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Usuario.cs",
-              "RelativeToolTip": "..\\Dominio\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T23:04:59.205Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Premium.cs",
-              "DocumentMoniker": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Premium.cs",
-              "RelativeDocumentMoniker": "..\\Dominio\\Premium.cs",
-              "ToolTip": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Premium.cs",
-              "RelativeToolTip": "..\\Dominio\\Premium.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T23:03:11.185Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Ocacionales.cs",
-              "DocumentMoniker": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Ocacionales.cs",
-              "RelativeDocumentMoniker": "..\\Dominio\\Ocacionales.cs",
-              "ToolTip": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Ocacionales.cs",
-              "RelativeToolTip": "..\\Dominio\\Ocacionales.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T23:03:08.932Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Cliente.cs",
-              "DocumentMoniker": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Cliente.cs",
-              "RelativeDocumentMoniker": "..\\Dominio\\Cliente.cs",
-              "ToolTip": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Cliente.cs",
-              "RelativeToolTip": "..\\Dominio\\Cliente.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T23:02:58.6Z",
               "EditorCaption": ""
             }
           ]

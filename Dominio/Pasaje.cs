@@ -26,7 +26,7 @@ namespace Dominio
         public Equipaje Equipaje { get => equipaje; set => equipaje = value; }
         public decimal Precio { get => precio; set => precio = value; }
 
-        public Pasaje(int id, Vuelo vuelo, DateTime fecha, Cliente pasajero, Equipaje equipaje, decimal precio)
+        public Pasaje(Vuelo vuelo, DateTime fecha, Cliente pasajero, Equipaje equipaje, decimal precio)
         {
             Id = ++ultimoId;
             Vuelo = vuelo;
@@ -43,11 +43,18 @@ namespace Dominio
 
         public void Validar()
         {
-            //ValidarFechaConFrecuencia();
-            //ValidarPasajero();
+            ValidarFechaConFrecuencia();
             //ValidarEquipaje();
             //ValidarPrecio();
         }
+
+        public void ValidarFechaConFrecuencia()
+        {
+             if (!Vuelo.Frecuencia.Contains(Fecha.DayOfWeek)) throw new Exception("La fecha no coincide con el vuelo.");
+        }
+
+        // Si tenemos que dar de alta un pasaje y pasarle los datos por consola, cual es la mejor forma de pedir el valor del EQUIPAJE(Enum)?? TryParse o valores numericos.
+        
 
 
     }

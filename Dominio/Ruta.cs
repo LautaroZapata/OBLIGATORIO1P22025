@@ -20,7 +20,7 @@ namespace Dominio
         public Aeropuerto AeropuertoLlegada { get => aeropuertoLlegada; set => aeropuertoLlegada = value; }
         public int Distancia { get => distancia; set => distancia = value; }
 
-        public Ruta(int id, Aeropuerto aeropuertoSalida, Aeropuerto aeropuertoLlegada, int ruta)
+        public Ruta(int id, Aeropuerto aeropuertoSalida, Aeropuerto aeropuertoLlegada, int distancia)
         {
             Id = ++ultimoId;
             AeropuertoSalida = aeropuertoSalida;
@@ -36,7 +36,7 @@ namespace Dominio
         public void Validar()
         {
             ValidarDistancia();
-            
+            ValidarAeropuertos();
         }
 
 
@@ -44,7 +44,12 @@ namespace Dominio
         {
             if (distancia < 1) throw new Exception("La distancia de la ruta debe ser mayor a 1KM");
         }
+        public void ValidarAeropuertos()
+        {
+            if (AeropuertoSalida.Equals(AeropuertoLlegada)) throw new Exception("El aeropuerto de salida no puede ser igual al de llegada");
+        }
 
-        
+
+
     }
 }
