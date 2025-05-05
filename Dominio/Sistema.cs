@@ -28,7 +28,8 @@ namespace Dominio
         private Sistema() 
         {
             // PRECARGA DE DATOS VA ACA ADENTRO
-            AgregarVuelo("AB1234",);
+            //AgregarVuelo("AB1234",);
+            //AgregarAvion();
 
         }
 
@@ -39,11 +40,11 @@ namespace Dominio
         {
             try
             {
-                Vuelo vuelo = new Vuelo(nroVuelo, ruta, avion, frecuencia);
-                vuelo.Validar();
                 ExisteVuelo(nroVuelo);
                 ExisteAvion(avion);
-                //ExisteRuta(aeropuertoSalida,aeropuertoLlegada);
+                Ruta ruta = ExisteRuta(aeropuertoSalida, aeropuertoLlegada);
+                Vuelo vuelo = new Vuelo(nroVuelo, ruta, avion, frecuencia);
+                vuelo.Validar();
                 listaVuelos.Add(vuelo);
 
             }
@@ -66,10 +67,16 @@ namespace Dominio
             }
         }
 
-        //public Ruta ExisteRuta(Aeropuerto aeropuertoSalida, Aeropuerto aeropuertoLlegada)
-        //{
-        //    // Como agregar la ruta al vuelo por parametro. Le pasamos directamente una ruta o los aeropuertos?
-        //}
+        public Ruta ExisteRuta(Aeropuerto aeropuertoSalida, Aeropuerto aeropuertoLlegada)
+        {
+            // recorremos lista de rutas y si existe la ruta la devuelve.
+            
+            foreach(Ruta unaRuta in listaRutas)
+            {
+                if (unaRuta.AeropuertoLlegada == aeropuertoLlegada && unaRuta.AeropuertoSalida == aeropuertoSalida) return unaRuta;
+            }
+            throw new Exception("No existe una ruta con los aeropuertos especificados.");
+        }
         #endregion
 
         #region Pasaje
@@ -95,7 +102,12 @@ namespace Dominio
             if (!listaUsuarios.Contains(pasajero)) throw new Exception("No existe el usuario");
         }
         #endregion
-        
 
+        #region Avion
+        public void AgregarAvion(string)
+        {
+
+        }
+        #endregion
     }
 }
