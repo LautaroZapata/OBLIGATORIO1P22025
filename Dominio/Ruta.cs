@@ -20,7 +20,7 @@ namespace Dominio
         public Aeropuerto AeropuertoLlegada { get => aeropuertoLlegada; set => aeropuertoLlegada = value; }
         public int Distancia { get => distancia; set => distancia = value; }
 
-        public Ruta(int id, Aeropuerto aeropuertoSalida, Aeropuerto aeropuertoLlegada, int distancia)
+        public Ruta(Aeropuerto aeropuertoSalida, Aeropuerto aeropuertoLlegada, int distancia)
         {
             Id = ++ultimoId;
             AeropuertoSalida = aeropuertoSalida;
