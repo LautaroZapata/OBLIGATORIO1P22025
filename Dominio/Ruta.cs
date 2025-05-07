@@ -42,7 +42,7 @@ namespace Dominio
 
         public void ValidarDistancia()
         {
-            if (distancia < 1) throw new Exception("La distancia de la ruta debe ser mayor a 1KM");
+            if (Distancia < 1) throw new Exception("La distancia de la ruta debe ser mayor a 1KM");
         }
         public void ValidarAeropuertos()
         {

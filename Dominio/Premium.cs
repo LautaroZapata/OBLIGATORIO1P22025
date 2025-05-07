@@ -20,5 +20,16 @@ namespace Dominio
         {
             Puntos = puntos;
         }
+
+        public override void Validar()
+        {
+            base.Validar();
+            if (Puntos < 0) throw new Exception("Los puntos no pueden ser menor a 0");
+        }
+
+        public override string ToString()
+        {
+            return $"{base.ToString()}, {Puntos} Tipo de cliente: Premium";
+        }
     }
 }

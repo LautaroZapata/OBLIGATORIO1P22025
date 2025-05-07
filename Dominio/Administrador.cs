@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Dominio
 {
@@ -20,11 +21,18 @@ namespace Dominio
         {
         }
 
-        public Administrador(string apodo, string mail, string password)
+        public Administrador(string apodo, string mail, string password) : base ( mail,  password)
         {
             Apodo = apodo;
             Mail = mail;
             Password = password;
         }
+
+        public override void Validar()
+        {
+            base.Validar();
+            if (string.IsNullOrEmpty(Apodo)) throw new Exception("El apodo no puede ser vacio");
+        }
+        
     }
 }

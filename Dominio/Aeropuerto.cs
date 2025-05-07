@@ -32,7 +32,7 @@ namespace Dominio
 
         public void Validar()
         {
-            ValidarCodigoIata(codigoIata);
+            ValidarCodigoIata(CodigoIata);
             ValidarCiudad();
         }
 
@@ -48,11 +48,11 @@ namespace Dominio
         }
         public void ValidarCiudad()
         {
-            if (string.IsNullOrEmpty(ciudad)) throw new Exception("La ciudad no puede ser vacia");
+            if (string.IsNullOrEmpty(Ciudad)) throw new Exception("La ciudad no puede ser vacia");
         }
         public override bool Equals(object? obj)
         {
-            return obj is Aeropuerto aeropuerto && this.ciudad == aeropuerto.ciudad;
+            return obj is Aeropuerto aeropuerto && this.ciudad == aeropuerto.Ciudad;
         }
     }
 }

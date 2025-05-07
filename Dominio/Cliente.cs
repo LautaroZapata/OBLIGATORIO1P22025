@@ -25,5 +25,17 @@ namespace Dominio
             Nombre = nombre;
             Nacionalidad = nacionalidad;
         }
+
+        public override void Validar()
+        {
+            base.Validar();
+            if (string.IsNullOrEmpty(Documento)) throw new Exception("El documento no puede ser vacio");
+            if(string.IsNullOrEmpty(Nombre)) throw new Exception("El nombre no puede ser vacio");
+            if (string.IsNullOrEmpty(Nacionalidad)) throw new Exception("La nacionalidad no puede ser vacia");
+        }
+        public override string ToString()
+        {
+            return $"{Nombre},{Mail},{Password},{Documento},{Nacionalidad}";
+        }
     }
 }

@@ -7,6 +7,7 @@ namespace Obligatorio
         {
             Sistema unS = Sistema.Instancia;
             int opcion = 0;
+ 
             // menu
             string[] opciones = { "Lista 1", "Lista2 2", "Lista 3", "Lista 4" };
             // solicita numeros hasta que se ponga 0
@@ -18,7 +19,8 @@ namespace Obligatorio
                 {
                     case 1:
                         // Listado de todos los clientes
-                        Console.WriteLine("Listado1");
+                        
+                        Console.WriteLine(unS.ListarClientes());
                         break;
                     case 2:
                         // Listar vuelos
