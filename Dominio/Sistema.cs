@@ -38,17 +38,17 @@ namespace Dominio
             #region PrecargaUsuarios
             AgregarUsuario(new Administrador("admin1","admin1@correo.com", "Admin123"));
             AgregarUsuario(new Administrador("admin2","admin2@correo.com", "Admin1234"));
-            AgregarUsuario(new Premium(1000, "5050624", "Lautaro", "oratualzc@gmail.com", "1234", "Uruguayo"));
-            AgregarUsuario(new Premium(200, "6045821", "Valentina", "valen.rios@example.com", "pass123", "Uruguaya"));
-            AgregarUsuario(new Premium(330, "7123490", "Diego", "diegomez@example.com", "abcd5678", "Argentino"));
-            AgregarUsuario(new Premium(1200, "8392014", "Camila", "camila.silva@example.com", "qwerty789", "Chilena"));
-            AgregarUsuario(new Premium(0, "9156302", "Felipe", "felipe.travels@example.com", "travel2025", "Paraguayo"));
+            AgregarUsuario(new Premium(1000, "50506264", "Lautaro", "oratualzc@gmail.com", "1234", "Uruguayo"));
+            AgregarUsuario(new Premium(200, "60458216", "Valentina", "valen.rios@example.com", "pass123", "Uruguaya"));
+            AgregarUsuario(new Premium(330, "71234907", "Diego", "diegomez@example.com", "abcd5678", "Argentino"));
+            AgregarUsuario(new Premium(1200, "83920148", "Camila", "camila.silva@example.com", "qwerty789", "Chilena"));
+            AgregarUsuario(new Premium(0, "91563020", "Felipe", "felipe.travels@example.com", "travel2025", "Paraguayo"));
 
-            AgregarUsuario(new Ocasionales("9156302", "Felipe", "Paraguayo", "felipe.travels@example.com", "travel2025"));
-            AgregarUsuario(new Ocasionales("8234107", "Lucía", "Uruguaya", "lucia.mendez@example.com", "lucia321"));
-            AgregarUsuario(new Ocasionales("7342981", "Marcos", "Chileno", "marcos.viaja@example.com", "marcos123"));
-            AgregarUsuario(new Ocasionales("6182734", "Sofía", "Argentina", "sofia.ruta@example.com", "sofiaviaje"));
-            AgregarUsuario(new Ocasionales("7029156", "Joaquín", "Peruano", "joaquin.aventura@example.com", "joaquin456"));
+            AgregarUsuario(new Ocasionales("91563027", "Felipe", "Paraguayo", "felipe.travels@example.com", "travel2025"));
+            AgregarUsuario(new Ocasionales("82341074", "Lucía", "Uruguaya", "lucia.mendez@example.com", "lucia321"));
+            AgregarUsuario(new Ocasionales("73429812", "Marcos", "Chileno", "marcos.viaja@example.com", "marcos123"));
+            AgregarUsuario(new Ocasionales("61827341", "Sofía", "Argentina", "sofia.ruta@example.com", "sofiaviaje"));
+            AgregarUsuario(new Ocasionales("70291561", "Joaquín", "Peruano", "joaquin.aventura@example.com", "joaquin456"));
 
 
 
@@ -337,6 +337,19 @@ namespace Dominio
             }
             throw new Exception("No esta registrado el Aeropuerto");
         }
+        public void ExisteAeropuerto(string codigoIata)
+        {
+            if (codigoIata.Length != 3) throw new Exception("El codigo Iata no puede ser mayor a 3 caracteres");
+            bool existe = false;
+            foreach (Aeropuerto unAeropuerto in listaAeropuertos)
+            {
+                if (unAeropuerto.CodigoIata == codigoIata) existe = true;
+            }
+            if(!existe) throw new Exception("No esta registrado el Aeropuerto");
+
+        }
+
+
 
         #endregion
 
@@ -392,6 +405,9 @@ namespace Dominio
         public List<Vuelo> ListarVuelos(string codigoIata)
         {
             List<Vuelo> aux = new List<Vuelo>();
+
+            ExisteAeropuerto(codigoIata);
+            
             foreach (Vuelo unVuelo in listaVuelos)
             {
                 if (unVuelo.Ruta.AeropuertoSalida.CodigoIata == codigoIata || unVuelo.Ruta.AeropuertoLlegada.CodigoIata == codigoIata)
@@ -409,10 +425,16 @@ namespace Dominio
             List<Pasaje> aux = new List<Pasaje>();
             foreach (Pasaje unPasaje in listaPasajes)
             {
-                if (unPasaje.Fecha >= fecha1 && unPasaje.Fecha <= fecha2) aux.Add(unPasaje);
+                if (unPasaje.Fecha >= fecha1 && unPasaje.Fecha <= fecha2) {
+                    aux.Add(unPasaje);
+                    unPasaje.Validar();
+                }
+                else
+                {
+                    throw new Exception("No existen pasajes en esas fechas");
+                }
             }
             return aux;
-
         }
         #endregion
     }

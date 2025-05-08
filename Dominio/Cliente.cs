@@ -32,6 +32,8 @@ namespace Dominio
             if (string.IsNullOrEmpty(Documento)) throw new Exception("El documento no puede ser vacio");
             if(string.IsNullOrEmpty(Nombre)) throw new Exception("El nombre no puede ser vacio");
             if (string.IsNullOrEmpty(Nacionalidad)) throw new Exception("La nacionalidad no puede ser vacia");
+            if (Documento.Length != 8) throw new Exception("El documento debe tener 8 numeros");
+
         }
         public override string ToString()
         {

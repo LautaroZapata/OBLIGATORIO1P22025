@@ -44,7 +44,7 @@ namespace Dominio
             TieneFrecuencia();
         }
 
-        public void ValidarNroVuelo()
+        private void ValidarNroVuelo()
         {
             if (nroVuelo.Length > 6) throw new Exception("El numero de vuelo no puede ser mayor a 6 caracteres.");
             if (string.IsNullOrEmpty(nroVuelo)) throw new Exception("El numero de vuelo no puede ser vacio");
@@ -63,17 +63,17 @@ namespace Dominio
             if (cantNumeros < 1 || cantNumeros > 4) throw new Exception("La cantidad de numeros del vuelo tiene que ser entre 1 y 4");
         }
 
-        public void ValidarAlcance()
+        private void ValidarAlcance()
         {
             if (avion.Alcance < ruta.Distancia) throw new Exception("El avion no tiene el suficiente alcance para cubrir la distancia a la ruta");
         }
 
-        public void TieneFrecuencia()
+        private void TieneFrecuencia()
         {
             if (frecuencia.Count == 0) throw new Exception("La frecuencia del vuelo debe ser como minimo 1 vez a la semana.");
         }
 
-        public string MostrarFrecuencia()
+        private string MostrarFrecuencia()
         {
             string dias = "";
             foreach (DayOfWeek dia in Frecuencia)

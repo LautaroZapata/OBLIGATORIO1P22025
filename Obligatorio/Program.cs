@@ -9,8 +9,7 @@ namespace Obligatorio
             int opcion = 0;
  
             // menu
-            string[] opciones = { "Lista 1", "Lista2 2", "Lista 3", "Lista 4" };
-            // solicita numeros hasta que se ponga 0
+            string[] opciones = { "Listar Clientes", "Listar Vuelos con codigo IATA", "Alta de cliente ocasional", "Listar Pasajes por rango de fechas" };
             do
             {
                 Menu(opciones);
@@ -19,54 +18,83 @@ namespace Obligatorio
                 {
                     case 1:
                         // Listado de todos los clientes
-                        
-                        foreach(Usuario unUser in unS.ListarClientes())
+                        try
                         {
-                            Console.WriteLine(unUser);
+                            foreach (Usuario unUser in unS.ListarClientes())
+                            {
+                                Console.WriteLine(unUser);
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
                         }
                         break;
+
+
                     case 2:
                         // Listar vuelos
-                        Console.WriteLine("Ingrese el codigo IATA del aeropuerto");
-                        string codigoIata = Console.ReadLine();
-                        foreach(Vuelo unVuelo in unS.ListarVuelos(codigoIata))
+
+                        try
                         {
-                            Console.WriteLine(unVuelo);
+                            Console.WriteLine("Ingrese el codigo IATA del aeropuerto");
+                            string codigoIata = Console.ReadLine();
+                            foreach (Vuelo unVuelo in unS.ListarVuelos(codigoIata))
+                            {
+                                Console.WriteLine(unVuelo);
+                            }
                         }
-
-
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
                         break;
+
+
+
                     case 3:
                         // Alta cliente ocasionales
-                        Console.WriteLine("Ingrese el documento del cliente");
-                        string documento = Console.ReadLine();
-                        Console.WriteLine("Ingrese el nombre del cliente");
-                        string nombre = Console.ReadLine();
-                        Console.WriteLine("Ingrese el mail del cliente");
-                        string mail = Console.ReadLine();
-                        Console.WriteLine("Ingrese la contraseña del cliente");
-                        string password = Console.ReadLine();
-                        Console.WriteLine("Ingrese la nacionalidad del cliente");
-                        string nacionalidad = Console.ReadLine();
-                        Ocasionales clienteOcasional = new Ocasionales(documento,nombre,mail,password,nacionalidad);
-                        unS.AgregarUsuario(clienteOcasional);
+                        try
+                        {
+                            Console.WriteLine("Ingrese el documento del cliente sin puntos ni guiones.");
+                            string documento = Console.ReadLine();
+                            Console.WriteLine("Ingrese el nombre del cliente");
+                            string nombre = Console.ReadLine();
+                            Console.WriteLine("Ingrese el mail del cliente");
+                            string mail = Console.ReadLine();
+                            Console.WriteLine("Ingrese la contraseña del cliente");
+                            string password = Console.ReadLine();
+                            Console.WriteLine("Ingrese la nacionalidad del cliente");
+                            string nacionalidad = Console.ReadLine();
+                            Ocasionales clienteOcasional = new Ocasionales(documento, nombre, mail, password, nacionalidad);
+                            unS.AgregarUsuario(clienteOcasional);
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                        
 
                         break;
                     case 4:
                         //Filtro pasajes
-                        Console.WriteLine("Ingrese una fecha");
-                        string fecha1 = Console.ReadLine();
-                        Console.WriteLine("Ingrese otra fecha");
-                        string fecha2 = Console.ReadLine();
-                        DateTime fecha1Parseada = DateTime.Parse(fecha1);
-                        DateTime fecha2Parseada = DateTime.Parse(fecha2);
-                        foreach (Pasaje unPasaje in unS.ListarPasajes(fecha1Parseada, fecha2Parseada))
+                        try
                         {
-                            Console.WriteLine(unPasaje);
+                            Console.WriteLine("Ingrese una fecha");
+                            string fecha1 = Console.ReadLine();
+                            Console.WriteLine("Ingrese otra fecha");
+                            string fecha2 = Console.ReadLine();
+                            DateTime fecha1Parseada = DateTime.Parse(fecha1);
+                            DateTime fecha2Parseada = DateTime.Parse(fecha2);
+                            foreach (Pasaje unPasaje in unS.ListarPasajes(fecha1Parseada, fecha2Parseada))
+                            {
+                                Console.WriteLine(unPasaje);
+                            }
                         }
-
-
-
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
                         break;
                 }
                 if (opcion != 0)

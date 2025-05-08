@@ -36,7 +36,7 @@ namespace Dominio
             ValidarCiudad();
         }
 
-        public void ValidarCodigoIata(string codigoIata)
+        private void ValidarCodigoIata(string codigoIata)
         {
             if (string.IsNullOrEmpty(codigoIata)) throw new Exception("El codigo IATA no puede ser vacio");
             if (codigoIata.Length != 3) throw new Exception("El codigo IATA debe ser de 3 letras");
@@ -46,7 +46,7 @@ namespace Dominio
                     throw new Exception("El código IATA solo puede contener letras");
             }
         }
-        public void ValidarCiudad()
+        private void ValidarCiudad()
         {
             if (string.IsNullOrEmpty(Ciudad)) throw new Exception("La ciudad no puede ser vacia");
         }

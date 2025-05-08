@@ -48,7 +48,7 @@ namespace Dominio
             //ValidarPrecio();
         }
 
-        public void ValidarFechaConFrecuencia()
+        private void ValidarFechaConFrecuencia()
         {
              if (!Vuelo.Frecuencia.Contains(Fecha.DayOfWeek)) throw new Exception("La fecha no coincide con el vuelo.");
         }
