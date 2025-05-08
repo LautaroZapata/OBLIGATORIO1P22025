@@ -44,7 +44,8 @@ namespace Dominio
         public void Validar()
         {
             ValidarFechaConFrecuencia();
-            //ValidarEquipaje();
+            // Son metodos para la segunda entrega.
+            //ValidarEquipaje(); 
             //ValidarPrecio();
         }
 
@@ -52,8 +53,6 @@ namespace Dominio
         {
              if (!Vuelo.Frecuencia.Contains(Fecha.DayOfWeek)) throw new Exception("La fecha no coincide con el vuelo.");
         }
-
-        // Si tenemos que dar de alta un pasaje y pasarle los datos por consola, cual es la mejor forma de pedir el valor del EQUIPAJE(Enum)?? TryParse o valores numericos.
 
         public override string ToString()
         {

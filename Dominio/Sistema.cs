@@ -28,13 +28,13 @@ namespace Dominio
         }
         private Sistema() 
         {
-            // PRECARGA DE DATOS VA ACA ADENTRO
             PrecargaDatos();
-            
         }
 
         public void PrecargaDatos()
         {
+            // Puede que existan diferencias a los prompts de la documentación ya que la IA cometía errores en la generación de los datos. Por lo que corregimos manualmente algunas precargas.
+
             #region PrecargaUsuarios
             AgregarUsuario(new Administrador("admin1","admin1@correo.com", "Admin123"));
             AgregarUsuario(new Administrador("admin2","admin2@correo.com", "Admin1234"));
@@ -181,10 +181,6 @@ namespace Dominio
 
 
             #endregion
-
-
-
-
         }
         // METODOS
 
@@ -194,7 +190,6 @@ namespace Dominio
             try
             {
                 ExisteVuelo(nroVuelo);
-                //ExisteAvion(avion);
                 Vuelo vuelo = new Vuelo(nroVuelo, ExisteRuta(aeropuertoSalida, aeropuertoLlegada), avion, frecuencia);
                 vuelo.Validar();
                 listaVuelos.Add(vuelo);
@@ -226,7 +221,6 @@ namespace Dominio
         public Ruta ExisteRuta(Aeropuerto aeropuertoSalida, Aeropuerto aeropuertoLlegada)
         {
             // recorremos lista de rutas y si existe la ruta la devuelve.
-            
             foreach(Ruta unaRuta in listaRutas)
             {
                 if (unaRuta.AeropuertoLlegada == aeropuertoLlegada && unaRuta.AeropuertoSalida == aeropuertoSalida) return unaRuta;
@@ -243,7 +237,7 @@ namespace Dominio
                 Pasaje pasaje = new Pasaje(vuelo, fecha, pasajero, equipaje, precio);
                 pasaje.Validar();
                 ValidarPasajero(pasajero);
-                // CalcularPrecioPasaje() iría en este momento antes de la emision del pasaje.
+                // CalcularPrecioPasaje() iría en este momento antes de la emision del pasaje. El precio lo establecimos en la precarga para omitir el calculo en esta primera entrega.
                 listaPasajes.Add(pasaje);
 
             }
@@ -308,7 +302,6 @@ namespace Dominio
             }
 
         }
-
 
         #endregion
 

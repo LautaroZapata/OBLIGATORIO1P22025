@@ -40,11 +40,11 @@ namespace Dominio
         }
 
 
-        public void ValidarDistancia()
+        private void ValidarDistancia()
         {
             if (Distancia < 1) throw new Exception("La distancia de la ruta debe ser mayor a 1KM");
         }
-        public void ValidarAeropuertos()
+        private void ValidarAeropuertos()
         {
             if (AeropuertoSalida.Equals(AeropuertoLlegada)) throw new Exception("El aeropuerto de salida no puede ser igual al de llegada");
         }

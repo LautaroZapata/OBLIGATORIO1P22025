@@ -12,13 +12,7 @@ namespace Dominio
         Ruta ruta;
         Avion avion;
         List<DayOfWeek> frecuencia = new List<DayOfWeek>();
-        // new List<DayOfWeek>{DayOfWeek.ELDIA, DayOfWeek.ELDIA2} Para precarga de Vuelo.
-
-        // Se cambia a un ENUM. List<DayOfWeek> frecuencia = new List<DayOfWeek>(); Usa el System el DayOfWeek. Le pasamos algunos dias a la precarga
-        // EJ para comparar la frecuencia con el dia de hoy para saber si esta disponible esa frecuencia para hoy: DateTime hoy = DateTime.Now;
-        // hoy.DayOfWeek // Esto te devuelve el dia que es hoy con nombre. Ej de salida Thursday 
-        // Para pasarlo a español se le hace un hoy.ToString("dddd",CultureInfo.CurrentCulture);
-        // Para comprobar hacemos if ( (int)hoy.DayOfWeek == (int)DayOfWeek.Monday) Hoy es lunes?
+        
 
         public string NroVuelo { get => nroVuelo; set => nroVuelo = value; }
         public Ruta Ruta { get => ruta; set => ruta = value; }
@@ -44,7 +38,7 @@ namespace Dominio
             TieneFrecuencia();
         }
 
-        private void ValidarNroVuelo()
+        private void ValidarNroVuelo() 
         {
             if (nroVuelo.Length > 6) throw new Exception("El numero de vuelo no puede ser mayor a 6 caracteres.");
             if (string.IsNullOrEmpty(nroVuelo)) throw new Exception("El numero de vuelo no puede ser vacio");

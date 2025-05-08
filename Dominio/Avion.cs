@@ -39,7 +39,7 @@ namespace Dominio
             ValidarModelo();
             ValidarAsientos();
             ValidarAlcance();
-            //CostoOperacionKm;
+            //CostoOperacionKm; Se realiza en la segunda entrega.
         }
 
         private void ValidarFabricante()

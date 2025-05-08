@@ -24,7 +24,7 @@ namespace Dominio
             Password = password;
         }
 
-        public virtual void Validar()
+        public virtual void Validar() // Metodo polimorfico.
         {
             if (string.IsNullOrEmpty(Mail)) throw new Exception("El mail es obligatorio");
             if (string.IsNullOrEmpty(Password)) throw new Exception("La contraseña es obligatoria");
