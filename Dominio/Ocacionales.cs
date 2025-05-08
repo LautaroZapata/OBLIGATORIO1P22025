@@ -18,7 +18,7 @@ namespace Dominio
         {
         }
 
-        public Ocasionales(string documento, string nombre, string mail, string password, string nacionalidad) : base(documento, nombre, mail, password, nacionalidad)
+        public Ocasionales(string documento, string nombre, string nacionalidad, string mail, string password) : base(documento, nombre, nacionalidad, mail, password)
         {
             Elegible = random.Next(0, 2) == 1; // Agarra un numero entre 0 y 2  [0,1], si da 1 es true si da 0 es false.
         }
@@ -28,9 +28,17 @@ namespace Dominio
             base.Validar();
         }
 
+        private string EsElegible()
+        {
+            if (Elegible) return "Si";
+            return "No";
+        }
+
         public override string ToString()
         {
-            return $"{base.ToString()} Tipo de cliente: Ocasional";
+            return $"{base.ToString()}, Es Elegible: {EsElegible()}, Tipo de cliente: Ocasional \n";
         }
+
+        
     }
 }

@@ -20,21 +20,52 @@ namespace Obligatorio
                     case 1:
                         // Listado de todos los clientes
                         
-                        Console.WriteLine(unS.ListarClientes());
+                        foreach(Usuario unUser in unS.ListarClientes())
+                        {
+                            Console.WriteLine(unUser);
+                        }
                         break;
                     case 2:
                         // Listar vuelos
-                        Console.WriteLine("Listado2");
+                        Console.WriteLine("Ingrese el codigo IATA del aeropuerto");
+                        string codigoIata = Console.ReadLine();
+                        foreach(Vuelo unVuelo in unS.ListarVuelos(codigoIata))
+                        {
+                            Console.WriteLine(unVuelo);
+                        }
+
 
                         break;
                     case 3:
                         // Alta cliente ocasionales
-                        Console.WriteLine("Listado3");
+                        Console.WriteLine("Ingrese el documento del cliente");
+                        string documento = Console.ReadLine();
+                        Console.WriteLine("Ingrese el nombre del cliente");
+                        string nombre = Console.ReadLine();
+                        Console.WriteLine("Ingrese el mail del cliente");
+                        string mail = Console.ReadLine();
+                        Console.WriteLine("Ingrese la contraseña del cliente");
+                        string password = Console.ReadLine();
+                        Console.WriteLine("Ingrese la nacionalidad del cliente");
+                        string nacionalidad = Console.ReadLine();
+                        Ocasionales clienteOcasional = new Ocasionales(documento,nombre,mail,password,nacionalidad);
+                        unS.AgregarUsuario(clienteOcasional);
 
                         break;
                     case 4:
                         //Filtro pasajes
-                        Console.WriteLine("Listado4");
+                        Console.WriteLine("Ingrese una fecha");
+                        string fecha1 = Console.ReadLine();
+                        Console.WriteLine("Ingrese otra fecha");
+                        string fecha2 = Console.ReadLine();
+                        DateTime fecha1Parseada = DateTime.Parse(fecha1);
+                        DateTime fecha2Parseada = DateTime.Parse(fecha2);
+                        foreach (Pasaje unPasaje in unS.ListarPasajes(fecha1Parseada, fecha2Parseada))
+                        {
+                            Console.WriteLine(unPasaje);
+                        }
+
+
 
                         break;
                 }

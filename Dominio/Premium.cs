@@ -16,7 +16,7 @@ namespace Dominio
         {
         }
 
-        public Premium(int puntos, string documento, string nombre, string mail, string password, string nacionalidad ): base(documento, nombre, mail, password, nacionalidad)
+        public Premium(int puntos, string documento, string nombre, string mail, string password, string nacionalidad ): base(documento, nombre, nacionalidad, mail, password )
         {
             Puntos = puntos;
         }
@@ -29,7 +29,9 @@ namespace Dominio
 
         public override string ToString()
         {
-            return $"{base.ToString()}, {Puntos} Tipo de cliente: Premium";
+            return $"{base.ToString()}, {Puntos} Tipo de cliente: Premium \n";
         }
+
+        
     }
 }

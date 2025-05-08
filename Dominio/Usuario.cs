@@ -30,5 +30,7 @@ namespace Dominio
             if (string.IsNullOrEmpty(Password)) throw new Exception("La contraseña es obligatoria");
 
         }
+
+       
     }
 }

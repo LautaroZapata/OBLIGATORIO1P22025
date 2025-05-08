@@ -54,7 +54,12 @@ namespace Dominio
         }
 
         // Si tenemos que dar de alta un pasaje y pasarle los datos por consola, cual es la mejor forma de pedir el valor del EQUIPAJE(Enum)?? TryParse o valores numericos.
-        
+
+        public override string ToString()
+        {
+            return $"Id: {Id} , Nombre: {Pasajero.Nombre} , Precio: {Precio} , Fecha: {Fecha} , NroVuelo {Vuelo.NroVuelo} \n ";
+            ;
+        }
 
 
     }

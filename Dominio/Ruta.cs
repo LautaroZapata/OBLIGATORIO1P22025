@@ -49,6 +49,10 @@ namespace Dominio
             if (AeropuertoSalida.Equals(AeropuertoLlegada)) throw new Exception("El aeropuerto de salida no puede ser igual al de llegada");
         }
 
+        public override string ToString()
+        {
+            return $"{AeropuertoSalida} - {AeropuertoLlegada}";
+        }
 
 
     }

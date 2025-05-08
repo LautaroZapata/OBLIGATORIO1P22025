@@ -72,8 +72,22 @@ namespace Dominio
         {
             if (frecuencia.Count == 0) throw new Exception("La frecuencia del vuelo debe ser como minimo 1 vez a la semana.");
         }
-        
 
-        
+        public string MostrarFrecuencia()
+        {
+            string dias = "";
+            foreach (DayOfWeek dia in Frecuencia)
+            {
+                dias += $"{dia}, ";
+            }
+            return dias;
+        }
+
+        public override string ToString()
+        {
+            return $"{NroVuelo} , {Avion}, {Ruta}, {MostrarFrecuencia()} \n";
+        }
+
+
     }
 }

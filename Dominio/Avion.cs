@@ -60,5 +60,10 @@ namespace Dominio
         {
             if (Alcance < 1) throw new Exception("El alcance del avion no puede ser menor a 1KM");
         }
+
+        public override string ToString()
+        {
+            return $"{Modelo}";
+        }
     }
 }

@@ -54,5 +54,11 @@ namespace Dominio
         {
             return obj is Aeropuerto aeropuerto && this.ciudad == aeropuerto.Ciudad;
         }
+
+        public override string ToString()
+        {
+            return $"{CodigoIata}";
+            ;
+        }
     }
 }

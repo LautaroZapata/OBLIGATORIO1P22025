@@ -33,6 +33,7 @@ namespace Dominio
             base.Validar();
             if (string.IsNullOrEmpty(Apodo)) throw new Exception("El apodo no puede ser vacio");
         }
+
         
     }
 }

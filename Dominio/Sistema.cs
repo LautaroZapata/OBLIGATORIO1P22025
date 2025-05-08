@@ -38,16 +38,18 @@ namespace Dominio
             #region PrecargaUsuarios
             AgregarUsuario(new Administrador("admin1","admin1@correo.com", "Admin123"));
             AgregarUsuario(new Administrador("admin2","admin2@correo.com", "Admin1234"));
-            AgregarUsuario(new Premium(1000,"5050624","Lautaro","oratualzc@gmail.com","1234","Uruguayo"));
+            AgregarUsuario(new Premium(1000, "5050624", "Lautaro", "oratualzc@gmail.com", "1234", "Uruguayo"));
             AgregarUsuario(new Premium(200, "6045821", "Valentina", "valen.rios@example.com", "pass123", "Uruguaya"));
             AgregarUsuario(new Premium(330, "7123490", "Diego", "diegomez@example.com", "abcd5678", "Argentino"));
             AgregarUsuario(new Premium(1200, "8392014", "Camila", "camila.silva@example.com", "qwerty789", "Chilena"));
             AgregarUsuario(new Premium(0, "9156302", "Felipe", "felipe.travels@example.com", "travel2025", "Paraguayo"));
-            AgregarUsuario(new Ocasionales("9156302", "Felipe", "felipe.travels@example.com", "travel2025", "Paraguayo"));
-            AgregarUsuario(new Ocasionales("8234107", "Lucía", "lucia.mendez@example.com", "lucia321", "Uruguaya"));
-            AgregarUsuario(new Ocasionales("7342981", "Marcos", "marcos.viaja@example.com", "marcos123", "Chileno"));
-            AgregarUsuario(new Ocasionales("6182734", "Sofía", "sofia.ruta@example.com", "sofiaviaje", "Argentina"));
-            AgregarUsuario(new Ocasionales("7029156", "Joaquín", "joaquin.aventura@example.com", "joaquin456", "Peruano"));
+
+            AgregarUsuario(new Ocasionales("9156302", "Felipe", "Paraguayo", "felipe.travels@example.com", "travel2025"));
+            AgregarUsuario(new Ocasionales("8234107", "Lucía", "Uruguaya", "lucia.mendez@example.com", "lucia321"));
+            AgregarUsuario(new Ocasionales("7342981", "Marcos", "Chileno", "marcos.viaja@example.com", "marcos123"));
+            AgregarUsuario(new Ocasionales("6182734", "Sofía", "Argentina", "sofia.ruta@example.com", "sofiaviaje"));
+            AgregarUsuario(new Ocasionales("7029156", "Joaquín", "Peruano", "joaquin.aventura@example.com", "joaquin456"));
+
 
 
 
@@ -116,41 +118,69 @@ namespace Dominio
 
             #endregion
             #region PrecargaVuelos
-            AgregarVuelo("AR101", DevolverAeropuerto("MVD"), DevolverAeropuerto("EZE"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Monday });         // 200 km
-            AgregarVuelo("AR102", DevolverAeropuerto("MVD"), DevolverAeropuerto("GRU"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Tuesday });       // 1570 km
-            AgregarVuelo("AR103", DevolverAeropuerto("MVD"), DevolverAeropuerto("SCL"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Wednesday });    // 1370 km
-            AgregarVuelo("AR104", DevolverAeropuerto("EZE"), DevolverAeropuerto("LIM"), DevolverAvion("A320neo"), new List<DayOfWeek> { DayOfWeek.Thursday });      // 3140 km
-            AgregarVuelo("AR105", DevolverAeropuerto("GRU"), DevolverAeropuerto("MIA"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Friday });        // 6540 km
-            AgregarVuelo("AR106", DevolverAeropuerto("SCL"), DevolverAeropuerto("MIA"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Saturday });      // 6620 km ❌ demasiado → reemplazo
-            AgregarVuelo("AR107", DevolverAeropuerto("SCL"), DevolverAeropuerto("MIA"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Saturday });        // 6620 km ✔️ (CS300 = 6112 km) ❌ aún no llega → reemplazo
-            AgregarVuelo("AR108", DevolverAeropuerto("SCL"), DevolverAeropuerto("MIA"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Saturday });      // ✔️ conservado (6570 < 6620 pero podría ser redondeo, lo ajustamos abajo)
-            AgregarVuelo("AR109", DevolverAeropuerto("PDP"), DevolverAeropuerto("AEP"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Sunday });        // 320 km
-            AgregarVuelo("AR110", DevolverAeropuerto("ASU"), DevolverAeropuerto("EZE"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Monday });        // 1080 km
-            AgregarVuelo("AR111", DevolverAeropuerto("JFK"), DevolverAeropuerto("LAX"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Tuesday });       // 3980 km
-            AgregarVuelo("AR190", DevolverAeropuerto("BCN"), DevolverAeropuerto("MAD"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Wednesday });     // 620 km
-            AgregarVuelo("AR140", DevolverAeropuerto("DXB"), DevolverAeropuerto("PEK"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Thursday });      // 5840 km
-            AgregarVuelo("AR112", DevolverAeropuerto("COR"), DevolverAeropuerto("MDZ"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Friday });        // 660 km
-            AgregarVuelo("AR113", DevolverAeropuerto("MDZ"), DevolverAeropuerto("SCL"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Saturday });      // 480 km
-            AgregarVuelo("AR114", DevolverAeropuerto("CYD"), DevolverAeropuerto("MVD"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Sunday });        // 170 km
-            AgregarVuelo("AR115", DevolverAeropuerto("SJO"), DevolverAeropuerto("PDP"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Monday });        // 550 km
-            AgregarVuelo("AR116", DevolverAeropuerto("DXB"), DevolverAeropuerto("MAD"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Tuesday });       // 5700 km
-            AgregarVuelo("AR117", DevolverAeropuerto("RIO"), DevolverAeropuerto("GRU"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Wednesday });     // 430 km
-            AgregarVuelo("AR118", DevolverAeropuerto("RIO"), DevolverAeropuerto("MVD"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Thursday });      // 1820 km
-            AgregarVuelo("AR119", DevolverAeropuerto("COR"), DevolverAeropuerto("AEP"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Friday });        // 660 km
-            AgregarVuelo("AR120", DevolverAeropuerto("CYD"), DevolverAeropuerto("EZE"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Saturday });      // 190 km
-            AgregarVuelo("AR121", DevolverAeropuerto("SJO"), DevolverAeropuerto("ASU"), DevolverAvion("A320neo"), new List<DayOfWeek> { DayOfWeek.Sunday });        // 1080 km
-            AgregarVuelo("AR122", DevolverAeropuerto("PDP"), DevolverAeropuerto("RIO"), DevolverAvion("A320neo"), new List<DayOfWeek> { DayOfWeek.Monday });        // 1930 km
-            AgregarVuelo("AR123", DevolverAeropuerto("MVD"), DevolverAeropuerto("LIM"), DevolverAvion("A320neo"), new List<DayOfWeek> { DayOfWeek.Tuesday });       // 3120 km
-            AgregarVuelo("AR124", DevolverAeropuerto("MIA"), DevolverAeropuerto("JFK"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Wednesday });     // 1760 km
-            AgregarVuelo("AR125", DevolverAeropuerto("MAD"), DevolverAeropuerto("JFK"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Thursday });      // 5760 km
-            AgregarVuelo("AR126", DevolverAeropuerto("LIM"), DevolverAeropuerto("SCL"), DevolverAvion("A320neo"), new List<DayOfWeek> { DayOfWeek.Friday });        // 2000 km
-            AgregarVuelo("AR127", DevolverAeropuerto("MIA"), DevolverAeropuerto("BCN"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Saturday });      // 7450 km ❌ supera → reemplazo
-            AgregarVuelo("AR199", DevolverAeropuerto("MIA"), DevolverAeropuerto("BCN"), DevolverAvion("CS300"), new List<DayOfWeek> { DayOfWeek.Saturday });        // 7450 km ❌ también supera
-            AgregarVuelo("AR128", DevolverAeropuerto("MVD"), DevolverAeropuerto("JFK"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Sunday });        // 8600 km ❌ supera → elimino
-            AgregarVuelo("AR129", DevolverAeropuerto("PEK"), DevolverAeropuerto("LAX"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Monday });        // 10000 km ❌ supera → elimino
-            AgregarVuelo("AR130", DevolverAeropuerto("PEK"), DevolverAeropuerto("JFK"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Tuesday });       // 11000 km ❌ supera → elimino
+            AgregarVuelo("AR101", DevolverAeropuerto("MVD"), DevolverAeropuerto("EZE"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Monday, DayOfWeek.Friday, DayOfWeek.Wednesday });      
+            AgregarVuelo("AR102", DevolverAeropuerto("MVD"), DevolverAeropuerto("GRU"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Tuesday });
+            AgregarVuelo("AR103", DevolverAeropuerto("MVD"), DevolverAeropuerto("SCL"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Wednesday});
+            AgregarVuelo("AR104", DevolverAeropuerto("EZE"), DevolverAeropuerto("LIM"), DevolverAvion("A320neo"), new List<DayOfWeek> { DayOfWeek.Thursday, DayOfWeek.Friday });   
+            AgregarVuelo("AR105", DevolverAeropuerto("GRU"), DevolverAeropuerto("MIA"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Friday });      
+            AgregarVuelo("AR106", DevolverAeropuerto("SCL"), DevolverAeropuerto("MIA"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Saturday });     
+            AgregarVuelo("AR107", DevolverAeropuerto("SCL"), DevolverAeropuerto("MIA"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Saturday });      
+            AgregarVuelo("AR108", DevolverAeropuerto("SCL"), DevolverAeropuerto("MIA"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Saturday });      
+            AgregarVuelo("AR109", DevolverAeropuerto("PDP"), DevolverAeropuerto("AEP"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Sunday });        
+            AgregarVuelo("AR110", DevolverAeropuerto("ASU"), DevolverAeropuerto("EZE"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Monday });        
+            AgregarVuelo("AR111", DevolverAeropuerto("JFK"), DevolverAeropuerto("LAX"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Tuesday });     
+            AgregarVuelo("AR190", DevolverAeropuerto("BCN"), DevolverAeropuerto("MAD"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Wednesday });   
+            AgregarVuelo("AR140", DevolverAeropuerto("DXB"), DevolverAeropuerto("PEK"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Thursday });    
+            AgregarVuelo("AR112", DevolverAeropuerto("COR"), DevolverAeropuerto("MDZ"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Friday });       
+            AgregarVuelo("AR113", DevolverAeropuerto("MDZ"), DevolverAeropuerto("SCL"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Saturday });    
+            AgregarVuelo("AR114", DevolverAeropuerto("CYD"), DevolverAeropuerto("MVD"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Sunday });      
+            AgregarVuelo("AR115", DevolverAeropuerto("SJO"), DevolverAeropuerto("PDP"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Monday });      
+            AgregarVuelo("AR116", DevolverAeropuerto("DXB"), DevolverAeropuerto("MAD"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Tuesday, DayOfWeek.Friday });      
+            AgregarVuelo("AR117", DevolverAeropuerto("RIO"), DevolverAeropuerto("GRU"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Wednesday });     
+            AgregarVuelo("AR118", DevolverAeropuerto("RIO"), DevolverAeropuerto("MVD"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Thursday });     
+            AgregarVuelo("AR119", DevolverAeropuerto("COR"), DevolverAeropuerto("AEP"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Friday });        
+            AgregarVuelo("AR120", DevolverAeropuerto("CYD"), DevolverAeropuerto("EZE"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Saturday });      
+            AgregarVuelo("AR121", DevolverAeropuerto("SJO"), DevolverAeropuerto("ASU"), DevolverAvion("A320neo"), new List<DayOfWeek> { DayOfWeek.Sunday });        
+            AgregarVuelo("AR122", DevolverAeropuerto("PDP"), DevolverAeropuerto("RIO"), DevolverAvion("A320neo"), new List<DayOfWeek> { DayOfWeek.Monday });        
+            AgregarVuelo("AR123", DevolverAeropuerto("MVD"), DevolverAeropuerto("LIM"), DevolverAvion("A320neo"), new List<DayOfWeek> { DayOfWeek.Tuesday, DayOfWeek.Friday });       
+            AgregarVuelo("AR125", DevolverAeropuerto("MAD"), DevolverAeropuerto("JFK"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Thursday });      
+            AgregarVuelo("AR124", DevolverAeropuerto("MIA"), DevolverAeropuerto("JFK"), DevolverAvion("E195-E2"), new List<DayOfWeek> { DayOfWeek.Wednesday });     
+            AgregarVuelo("AR126", DevolverAeropuerto("LIM"), DevolverAeropuerto("SCL"), DevolverAvion("A320neo"), new List<DayOfWeek> { DayOfWeek.Friday });        
+            AgregarVuelo("AR127", DevolverAeropuerto("MIA"), DevolverAeropuerto("BCN"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Saturday });      
+            AgregarVuelo("AR199", DevolverAeropuerto("MIA"), DevolverAeropuerto("BCN"), DevolverAvion("CS300"), new List<DayOfWeek> { DayOfWeek.Saturday });        
+            AgregarVuelo("AR128", DevolverAeropuerto("MVD"), DevolverAeropuerto("JFK"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Sunday, DayOfWeek.Friday });        
+            AgregarVuelo("AR129", DevolverAeropuerto("PEK"), DevolverAeropuerto("LAX"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Monday, DayOfWeek.Friday });        
+            AgregarVuelo("AR130", DevolverAeropuerto("PEK"), DevolverAeropuerto("JFK"), DevolverAvion("737 MAX"), new List<DayOfWeek> { DayOfWeek.Tuesday });
             #endregion
+            #region PrecargaPasajes
+            AgregarPasaje(DevolverVuelo("AR101"), new DateTime(2025, 5, 9), DevolverCliente("oratualzc@gmail.com"), Equipaje.CABINA, 250);
+            AgregarPasaje(DevolverVuelo("AR102"), new DateTime(2025, 5, 13), DevolverCliente("valen.rios@example.com"), Equipaje.BODEGA, 300);
+            AgregarPasaje(DevolverVuelo("AR103"), new DateTime(2025, 5, 14), DevolverCliente("diegomez@example.com"), Equipaje.CABINA, 270);
+            AgregarPasaje(DevolverVuelo("AR104"), new DateTime(2025, 5, 15), DevolverCliente("camila.silva@example.com"), Equipaje.BODEGA, 320);
+            AgregarPasaje(DevolverVuelo("AR105"), new DateTime(2025, 5, 16), DevolverCliente("felipe.travels@example.com"), Equipaje.CABINA, 310);
+            AgregarPasaje(DevolverVuelo("AR106"), new DateTime(2025, 5, 17), DevolverCliente("lucia.mendez@example.com"), Equipaje.BODEGA, 290);
+            AgregarPasaje(DevolverVuelo("AR107"), new DateTime(2025, 5, 17), DevolverCliente("marcos.viaja@example.com"), Equipaje.CABINA, 280);
+            AgregarPasaje(DevolverVuelo("AR108"), new DateTime(2025, 5, 17), DevolverCliente("sofia.ruta@example.com"), Equipaje.CABINA, 260);
+            AgregarPasaje(DevolverVuelo("AR109"), new DateTime(2025, 5, 11), DevolverCliente("joaquin.aventura@example.com"), Equipaje.BODEGA, 270);
+            AgregarPasaje(DevolverVuelo("AR110"), new DateTime(2025, 5, 12), DevolverCliente("oratualzc@gmail.com"), Equipaje.CABINA, 245);
+            AgregarPasaje(DevolverVuelo("AR111"), new DateTime(2025, 5, 13), DevolverCliente("valen.rios@example.com"), Equipaje.BODEGA, 330);
+            AgregarPasaje(DevolverVuelo("AR112"), new DateTime(2025, 5, 16), DevolverCliente("diegomez@example.com"), Equipaje.CABINA, 220);
+            AgregarPasaje(DevolverVuelo("AR113"), new DateTime(2025, 5, 17), DevolverCliente("camila.silva@example.com"), Equipaje.BODEGA, 210);
+            AgregarPasaje(DevolverVuelo("AR114"), new DateTime(2025, 5, 18), DevolverCliente("felipe.travels@example.com"), Equipaje.CABINA, 280);
+            AgregarPasaje(DevolverVuelo("AR115"), new DateTime(2025, 5, 19), DevolverCliente("lucia.mendez@example.com"), Equipaje.BODEGA, 270);
+            AgregarPasaje(DevolverVuelo("AR116"), new DateTime(2025, 5, 13), DevolverCliente("marcos.viaja@example.com"), Equipaje.CABINA, 350);
+            AgregarPasaje(DevolverVuelo("AR117"), new DateTime(2025, 5, 14), DevolverCliente("sofia.ruta@example.com"), Equipaje.BODEGA, 290);
+            AgregarPasaje(DevolverVuelo("AR118"), new DateTime(2025, 5, 15), DevolverCliente("joaquin.aventura@example.com"), Equipaje.CABINA, 260);
+            AgregarPasaje(DevolverVuelo("AR119"), new DateTime(2025, 5, 16), DevolverCliente("oratualzc@gmail.com"), Equipaje.BODEGA, 250);
+            AgregarPasaje(DevolverVuelo("AR120"), new DateTime(2025, 5, 17), DevolverCliente("valen.rios@example.com"), Equipaje.CABINA, 270);
+            AgregarPasaje(DevolverVuelo("AR121"), new DateTime(2025, 5, 18), DevolverCliente("diegomez@example.com"), Equipaje.BODEGA, 310);
+            AgregarPasaje(DevolverVuelo("AR122"), new DateTime(2025, 5, 19), DevolverCliente("camila.silva@example.com"), Equipaje.CABINA, 300);
+            AgregarPasaje(DevolverVuelo("AR123"), new DateTime(2025, 5, 13), DevolverCliente("felipe.travels@example.com"), Equipaje.BODEGA, 290);
+            AgregarPasaje(DevolverVuelo("AR124"), new DateTime(2025, 5, 14), DevolverCliente("lucia.mendez@example.com"), Equipaje.CABINA, 280);
+            AgregarPasaje(DevolverVuelo("AR125"), new DateTime(2025, 5, 15), DevolverCliente("joaquin.aventura@example.com"), Equipaje.BODEGA, 320);
 
+
+            #endregion
 
 
 
@@ -173,6 +203,15 @@ namespace Dominio
             {
                 throw ex;
             }
+        }
+
+        public Vuelo DevolverVuelo(string nroVuelo)
+        {
+            foreach(Vuelo unVuelo in listaVuelos)
+            {
+                if(unVuelo.NroVuelo == nroVuelo) return unVuelo;
+            }
+            throw new Exception("El vuelo no existe");
         }
 
 
@@ -302,26 +341,23 @@ namespace Dominio
         #endregion
 
         #region Usuario
-        //public string ExisteMail(string mail)
-        //{
-        //    foreach(Usuario unUser in listaUsuarios)
-        //    {
-        //        if(unUser.Mail == mail)
-        //        {
-        //            throw new Exception("El usuario ya existe");
-        //        }
-        //    }
-        //    return mail;
-        //}
-        //public void CrearUser(string mail, string password)
-        //{
-        //    ExisteMail(mail);
-        //}
+        public Cliente DevolverCliente(string mail)
+        {
+            List<Cliente> aux = ListarClientes();
+            foreach (Cliente unCliente in aux)
+            {
+                if (unCliente.Mail == mail)
+                {
+                    return unCliente;
+                }
+            }
+            throw new Exception("El cliente no existe");
+        }
+
         public void ExisteUsuario(Usuario unUser)
         {
             if (listaUsuarios.Contains(unUser)) throw new Exception("El usuario ya existe");
         }
-        
 
         public void AgregarUsuario(Usuario unUser)
         {
@@ -337,18 +373,47 @@ namespace Dominio
             }
         }
 
-        
 
 
-        public string ListarClientes()
+        #endregion
+
+        #region Listados
+        public List<Cliente> ListarClientes()
         {
+            List<Cliente> listaClientes = new List<Cliente>();
             foreach(Usuario unUser in listaUsuarios)
             {
-                 return unUser.ToString();
+                if (unUser is Cliente) listaClientes.Add((Cliente)unUser);
             }
-            throw new Exception("No hay clientes");
+            return listaClientes;
+
         }
 
+        public List<Vuelo> ListarVuelos(string codigoIata)
+        {
+            List<Vuelo> aux = new List<Vuelo>();
+            foreach (Vuelo unVuelo in listaVuelos)
+            {
+                if (unVuelo.Ruta.AeropuertoSalida.CodigoIata == codigoIata || unVuelo.Ruta.AeropuertoLlegada.CodigoIata == codigoIata)
+                {
+                    aux.Add(unVuelo);
+                }
+            }
+            return aux;
+        }
+
+        public List<Pasaje> ListarPasajes(DateTime fecha1, DateTime fecha2)
+        {
+            if(fecha1 > fecha2 && fecha2 < fecha1) throw new Exception("La fecha 1 no puede ser mayor a la fecha 2");
+
+            List<Pasaje> aux = new List<Pasaje>();
+            foreach (Pasaje unPasaje in listaPasajes)
+            {
+                if (unPasaje.Fecha >= fecha1 && unPasaje.Fecha <= fecha2) aux.Add(unPasaje);
+            }
+            return aux;
+
+        }
         #endregion
     }
 }

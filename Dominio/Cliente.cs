@@ -35,7 +35,9 @@ namespace Dominio
         }
         public override string ToString()
         {
-            return $"{Nombre},{Mail},{Password},{Documento},{Nacionalidad}";
+            return $"{Nombre} , {Mail} , {Password} , {Documento} , {Nacionalidad}";
         }
+
+        
     }
 }
