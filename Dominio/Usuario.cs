@@ -28,9 +28,13 @@ namespace Dominio
         {
             if (string.IsNullOrEmpty(Mail)) throw new Exception("El mail es obligatorio");
             if (string.IsNullOrEmpty(Password)) throw new Exception("La contraseña es obligatoria");
-
         }
 
-       
+        public override bool Equals(object? obj)
+        {
+            return obj is Usuario unUser && unUser.Mail == Mail;
+        }
+
+
     }
 }

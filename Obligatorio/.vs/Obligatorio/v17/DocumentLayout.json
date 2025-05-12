@@ -1,12 +1,69 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Development\\OBLIGATORIO1P22025\\Obligatorio\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6EF3569D-F78D-4EEE-B3D3-C33253154829}|..\\Dominio\\Dominio.csproj|c:\\development\\obligatorio1p22025\\dominio\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0C794DF-A9A5-418E-96D8-AAD0CBCF9216}|Obligatorio.csproj|c:\\development\\obligatorio1p22025\\obligatorio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0C794DF-A9A5-418E-96D8-AAD0CBCF9216}|Obligatorio.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EF3569D-F78D-4EEE-B3D3-C33253154829}|..\\Dominio\\Dominio.csproj|c:\\development\\obligatorio1p22025\\dominio\\sistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Usuario.cs",
+              "RelativeDocumentMoniker": "..\\Dominio\\Usuario.cs",
+              "ToolTip": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Usuario.cs",
+              "RelativeToolTip": "..\\Dominio\\Usuario.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAgwCIAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T01:08:11.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Sistema.cs",
+              "DocumentMoniker": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Sistema.cs",
+              "RelativeDocumentMoniker": "..\\Dominio\\Sistema.cs",
+              "ToolTip": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Sistema.cs",
+              "RelativeToolTip": "..\\Dominio\\Sistema.cs",
+              "ViewState": "AgIAAGMBAAAAAAAAAAAnwHgBAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T00:46:15.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Development\\OBLIGATORIO1P22025\\Obligatorio\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Development\\OBLIGATORIO1P22025\\Obligatorio\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAAADcAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T00:45:36.738Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
