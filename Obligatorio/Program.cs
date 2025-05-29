@@ -66,8 +66,9 @@ namespace Obligatorio
                             string password = Console.ReadLine();
                             Console.WriteLine("Ingrese la nacionalidad del cliente");
                             string nacionalidad = Console.ReadLine();
-                            Ocasionales clienteOcasional = new Ocasionales(documento, nombre, mail, password, nacionalidad);
+                            Ocasionales clienteOcasional = new Ocasionales(documento, nombre, nacionalidad, mail, password);
                             unS.AgregarUsuario(clienteOcasional);
+                            Console.WriteLine("Se registro el usuario con exito.");
                         }
                         catch (Exception e)
                         {

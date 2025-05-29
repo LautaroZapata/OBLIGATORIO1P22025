@@ -44,7 +44,7 @@ namespace Dominio
             AgregarUsuario(new Premium(1200, "83920148", "Camila", "camila.silva@example.com", "qwerty789", "Chilena"));
             AgregarUsuario(new Premium(0, "91563020", "Felipe", "felipe.travels@example.com", "travel2025", "Paraguayo"));
 
-            AgregarUsuario(new Ocasionales("91563027", "Felipe", "Paraguayo", "felipe.travels@example.com", "travel2025"));
+            AgregarUsuario(new Ocasionales("91563027", "Felipe", "Paraguayo", "felipe.travelz@example.com", "travel1025"));
             AgregarUsuario(new Ocasionales("82341074", "Lucía", "Uruguaya", "lucia.mendez@example.com", "lucia321"));
             AgregarUsuario(new Ocasionales("73429812", "Marcos", "Chileno", "marcos.viaja@example.com", "marcos123"));
             AgregarUsuario(new Ocasionales("61827341", "Sofía", "Argentina", "sofia.ruta@example.com", "sofiaviaje"));
@@ -390,6 +390,7 @@ namespace Dominio
             foreach(Usuario unUser in listaUsuarios)
             {
                 if (unUser is Cliente) listaClientes.Add((Cliente)unUser);
+
             }
             return listaClientes;
 
