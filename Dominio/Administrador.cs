@@ -7,7 +7,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Dominio
 {
-    public class Administrador : Usuario
+    public class Administrador : Usuario , IValidable
     {
         string apodo;
         string mail;
@@ -28,7 +28,7 @@ namespace Dominio
             Password = password;
         }
 
-        public override void Validar()
+        public void Validar()
         {
             base.Validar();
             if (string.IsNullOrEmpty(Apodo)) throw new Exception("El apodo no puede ser vacio");

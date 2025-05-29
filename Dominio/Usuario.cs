@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dominio
 { 
-    public abstract class Usuario
+    public abstract class Usuario : IValidable
     {
         
         string mail;
@@ -24,11 +24,16 @@ namespace Dominio
             Password = password;
         }
 
-        public virtual void Validar() // Metodo polimorfico.
+        //public virtual void Validar() // Metodo polimorfico.
+        //{
+            
+
+        //}
+
+        public void Validar()
         {
             if (string.IsNullOrEmpty(Mail)) throw new Exception("El mail es obligatorio");
             if (string.IsNullOrEmpty(Password)) throw new Exception("La contraseña es obligatoria");
-
         }
 
        

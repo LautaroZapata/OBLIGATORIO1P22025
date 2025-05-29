@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    public class Ocasionales : Cliente
+    public class Ocasionales : Cliente , IValidable
     {
         static Random random = new Random();
         bool elegible;
@@ -23,7 +23,7 @@ namespace Dominio
             Elegible = random.Next(0, 2) == 1; // Agarra un numero entre 0 y 2  [0,1], si da 1 es true si da 0 es false.
         }
 
-        public override void Validar()
+        public  void Validar()
         {
             base.Validar();
         }

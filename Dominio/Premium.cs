@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    public class Premium : Cliente
+    public class Premium : Cliente, IValidable
     {
         int puntos;
 
@@ -21,7 +21,7 @@ namespace Dominio
             Puntos = puntos;
         }
 
-        public override void Validar()
+        public  void Validar()
         {
             base.Validar();
             if (Puntos < 0) throw new Exception("Los puntos no pueden ser menor a 0");

@@ -1,11 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35913.81 d17.13
+VisualStudioVersion = 17.13.35913.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Obligatorio", "Obligatorio.csproj", "{A0C794DF-A9A5-418E-96D8-AAD0CBCF9216}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "..\Dominio\Dominio.csproj", "{6EF3569D-F78D-4EEE-B3D3-C33253154829}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObligatorioParte2", "..\ObligatorioParte2\ObligatorioParte2.csproj", "{67884B07-0913-4B99-8A54-36482D87B9B4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6EF3569D-F78D-4EEE-B3D3-C33253154829} = {6EF3569D-F78D-4EEE-B3D3-C33253154829}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +26,10 @@ Global
 		{6EF3569D-F78D-4EEE-B3D3-C33253154829}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EF3569D-F78D-4EEE-B3D3-C33253154829}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EF3569D-F78D-4EEE-B3D3-C33253154829}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67884B07-0913-4B99-8A54-36482D87B9B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67884B07-0913-4B99-8A54-36482D87B9B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67884B07-0913-4B99-8A54-36482D87B9B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67884B07-0913-4B99-8A54-36482D87B9B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -60,6 +60,34 @@ namespace Dominio
             ;
         }
 
+        public decimal CalcularMargenGanancia()
+        {
+            return Vuelo.CalcularCostoPorAsiento() * 1.25m; //Margen de ganancia 25%
+
+        }
+        public decimal CalcularPrecioPasaje()
+        {
+            if(this.Pasajero is Ocasionales)
+            {
+                if(this.Equipaje == Equipaje.CABINA)
+                {
+                    return CalcularMargenGanancia() + 1.10m; // Precio base + 10% EQUIPAJE CABINA
+                } 
+                else if(this.Equipaje == Equipaje.BODEGA)
+                {
+                    return CalcularMargenGanancia() + 1.20m; // Precio base + 20% EQUIPAJE BODEGA
+                }
+            }
+            if(this.Pasajero is Premium)
+            {
+                if(this.Equipaje == Equipaje.BODEGA)
+                {
+                    return CalcularMargenGanancia() + 1.05m; // Precio base + 5% EQUIPAJE BODEGA
+                }
+            }
+            return CalcularMargenGanancia();
+        }
+
 
     }
 }

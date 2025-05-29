@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    public abstract class Cliente : Usuario
+    public abstract class Cliente : Usuario , IValidable
     {
         string documento;
         string nombre;
@@ -26,7 +26,7 @@ namespace Dominio
             Nacionalidad = nacionalidad;
         }
 
-        public override void Validar()
+        public void Validar()
         {
             base.Validar();
             if (string.IsNullOrEmpty(Documento)) throw new Exception("El documento no puede ser vacio");

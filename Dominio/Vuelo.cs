@@ -12,12 +12,14 @@ namespace Dominio
         Ruta ruta;
         Avion avion;
         List<DayOfWeek> frecuencia = new List<DayOfWeek>();
-        
+        List<Pasaje> pasajes = new List<Pasaje>();
+
 
         public string NroVuelo { get => nroVuelo; set => nroVuelo = value; }
         public Ruta Ruta { get => ruta; set => ruta = value; }
         public Avion Avion { get => avion; set => avion = value; }
         public List<DayOfWeek> Frecuencia { get => frecuencia; set => frecuencia = value; }
+        public List<Pasaje> Pasajes { get => pasajes; set => pasajes = value; }
 
         public Vuelo()
         {
@@ -80,6 +82,11 @@ namespace Dominio
         public override string ToString()
         {
             return $"{NroVuelo} , {Avion}, {Ruta}, {MostrarFrecuencia()} \n";
+        }
+
+        public decimal CalcularCostoPorAsiento()
+        {
+            return (this.Avion.DevolverCostoOperacion() * this.Ruta.DevolverDistancia() + this.Ruta.DevolverCostoOperacionAeropuertos()) / this.Avion.DevolverCantAsientos();
         }
 
 

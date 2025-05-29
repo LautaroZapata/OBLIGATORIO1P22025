@@ -54,6 +54,15 @@ namespace Dominio
             return $"{AeropuertoSalida} - {AeropuertoLlegada}";
         }
 
+        public int DevolverDistancia()
+        {
+            return distancia;
+        }
+
+        public decimal DevolverCostoOperacionAeropuertos()
+        {
+            return AeropuertoSalida.CostoOperacion + AeropuertoLlegada.CostoOperacion;
+        }
 
     }
 }
