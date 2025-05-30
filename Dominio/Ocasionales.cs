@@ -39,6 +39,20 @@ namespace Dominio
             return $"{base.ToString()}, Es Elegible: {EsElegible()}, Tipo de cliente: Ocasional \n";
         }
 
-        
+        public override decimal CalcularPrecioPasaje(Equipaje equipaje, Vuelo vuelo)
+        {
+            decimal precio = vuelo.CalcularMargenGanancia();
+            if(equipaje == Equipaje.CABINA)
+            {
+                precio *= 1.1m;
+            }
+            if(equipaje == Equipaje.BODEGA)
+            {
+                precio *= 1.2m;
+            }
+            return precio;
+        }
+
+
     }
 }

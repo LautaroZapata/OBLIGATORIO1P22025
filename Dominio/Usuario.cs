@@ -24,16 +24,13 @@ namespace Dominio
             Password = password;
         }
 
-        //public virtual void Validar() // Metodo polimorfico.
-        //{
-            
-
-        //}
 
         public void Validar()
         {
             if (string.IsNullOrEmpty(Mail)) throw new Exception("El mail es obligatorio");
             if (string.IsNullOrEmpty(Password)) throw new Exception("La contraseña es obligatoria");
+            if (Password.Length <= 7)  throw new Exception("La contraseña debe tener minimo 8 caracteres");
+
         }
 
         public override bool Equals(object? obj)

@@ -32,6 +32,14 @@ namespace Dominio
             return $"{base.ToString()}, {Puntos} Tipo de cliente: Premium \n";
         }
 
-        
+        public override decimal CalcularPrecioPasaje(Equipaje equipaje, Vuelo vuelo)
+        {
+            decimal precio = vuelo.CalcularMargenGanancia();
+            if (equipaje == Equipaje.BODEGA)
+            {
+                precio *= 1.05m;
+            }
+            return precio;
+        }
     }
 }

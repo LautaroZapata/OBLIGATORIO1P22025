@@ -38,8 +38,8 @@ namespace Dominio
             #region PrecargaUsuarios
             AgregarUsuario(new Administrador("admin1","admin1@correo.com", "Admin123"));
             AgregarUsuario(new Administrador("admin2","admin2@correo.com", "Admin1234"));
-            AgregarUsuario(new Premium(1000, "50506264", "Lautaro", "oratualzc@gmail.com", "1234", "Uruguayo"));
-            AgregarUsuario(new Premium(200, "60458216", "Valentina", "valen.rios@example.com", "pass123", "Uruguaya"));
+            AgregarUsuario(new Premium(1000, "50506264", "Lautaro", "oratualzc@gmail.com", "12345678", "Uruguayo"));
+            AgregarUsuario(new Premium(200, "60458216", "Valentina", "valen.rios@example.com", "pass1234", "Uruguaya"));
             AgregarUsuario(new Premium(330, "71234907", "Diego", "diegomez@example.com", "abcd5678", "Argentino"));
             AgregarUsuario(new Premium(1200, "83920148", "Camila", "camila.silva@example.com", "qwerty789", "Chilena"));
             AgregarUsuario(new Premium(0, "91563020", "Felipe", "felipe.travels@example.com", "travel2025", "Paraguayo"));
@@ -360,6 +360,16 @@ namespace Dominio
             throw new Exception("El cliente no existe");
         }
 
+        public Cliente? DevolverCliente(string Mail, string Password)
+        {
+            List<Cliente> aux = ListarClientes();
+            foreach (Cliente unC in aux)
+            {
+                if(unC.Password == Password && unC.Mail == Mail) return unC;
+            }
+            return null;
+        }
+
         public void ExisteUsuario(Usuario unUser)
         {
             if (listaUsuarios.Contains(unUser)) throw new Exception("El usuario ya existe");
@@ -378,6 +388,20 @@ namespace Dominio
                 throw ex;
             }
         }
+        public void AgregarOcasional(Ocasionales unUser)
+        {
+            try
+            {
+                unUser.Validar();
+                ExisteUsuario(unUser);
+                listaUsuarios.Add(unUser);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
 
 
 

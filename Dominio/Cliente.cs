@@ -40,6 +40,11 @@ namespace Dominio
             return $"{Nombre} , {Mail} , {Password} , {Documento} , {Nacionalidad}";
         }
 
+        public virtual decimal CalcularPrecioPasaje(Equipaje equipaje, Vuelo vuelo)
+        {
+            return vuelo.CalcularMargenGanancia();
+        }
+
         
     }
 }

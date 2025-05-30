@@ -88,6 +88,10 @@ namespace Dominio
         {
             return (this.Avion.DevolverCostoOperacion() * this.Ruta.DevolverDistancia() + this.Ruta.DevolverCostoOperacionAeropuertos()) / this.Avion.DevolverCantAsientos();
         }
+        public decimal CalcularMargenGanancia()
+        {
+            return CalcularCostoPorAsiento() * 1.25m; //Margen de ganancia 25%
+        }
 
 
     }

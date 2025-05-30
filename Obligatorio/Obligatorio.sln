@@ -7,10 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Obligatorio", "Obligatorio.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "..\Dominio\Dominio.csproj", "{6EF3569D-F78D-4EEE-B3D3-C33253154829}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObligatorioParte2", "..\ObligatorioParte2\ObligatorioParte2.csproj", "{67884B07-0913-4B99-8A54-36482D87B9B4}"
-	ProjectSection(ProjectDependencies) = postProject
-		{6EF3569D-F78D-4EEE-B3D3-C33253154829} = {6EF3569D-F78D-4EEE-B3D3-C33253154829}
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC", "..\MVC\MVC.csproj", "{4E5683B6-1B88-4CD4-A7DB-2F361E5A9FF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,10 +23,10 @@ Global
 		{6EF3569D-F78D-4EEE-B3D3-C33253154829}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EF3569D-F78D-4EEE-B3D3-C33253154829}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EF3569D-F78D-4EEE-B3D3-C33253154829}.Release|Any CPU.Build.0 = Release|Any CPU
-		{67884B07-0913-4B99-8A54-36482D87B9B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{67884B07-0913-4B99-8A54-36482D87B9B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{67884B07-0913-4B99-8A54-36482D87B9B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{67884B07-0913-4B99-8A54-36482D87B9B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E5683B6-1B88-4CD4-A7DB-2F361E5A9FF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E5683B6-1B88-4CD4-A7DB-2F361E5A9FF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E5683B6-1B88-4CD4-A7DB-2F361E5A9FF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E5683B6-1B88-4CD4-A7DB-2F361E5A9FF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
