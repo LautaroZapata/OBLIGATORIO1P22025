@@ -19,7 +19,8 @@ namespace MVC.Controllers
             try
             {
                 Ocasionales unUser = new Ocasionales(Documento,Nombre,Nacionalidad,Mail,Password);
-                unS.AgregarOcasional(unUser);
+                unS.AgregarOcasional
+                    (unUser);
                 HttpContext.Session.SetString("Mail", unUser.Mail);
                 HttpContext.Session.SetString("Rol", unUser.GetType().ToString());
                 return RedirectToAction("Index", "Home");

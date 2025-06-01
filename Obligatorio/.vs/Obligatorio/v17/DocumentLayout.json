@@ -3,13 +3,22 @@
   "WorkspaceRootPath": "C:\\Development\\OBLIGATORIO1P22025\\Obligatorio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4E5683B6-1B88-4CD4-A7DB-2F361E5A9FF7}|..\\MVC\\MVC.csproj|c:\\development\\obligatorio1p22025\\mvc\\controllers\\registrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E5683B6-1B88-4CD4-A7DB-2F361E5A9FF7}|..\\MVC\\MVC.csproj|c:\\development\\obligatorio1p22025\\mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E5683B6-1B88-4CD4-A7DB-2F361E5A9FF7}|..\\MVC\\MVC.csproj|c:\\development\\obligatorio1p22025\\mvc\\views\\login\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6EF3569D-F78D-4EEE-B3D3-C33253154829}|..\\Dominio\\Dominio.csproj|c:\\development\\obligatorio1p22025\\dominio\\pasaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E5683B6-1B88-4CD4-A7DB-2F361E5A9FF7}|..\\MVC\\MVC.csproj|c:\\development\\obligatorio1p22025\\mvc\\views\\registro\\registro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6EF3569D-F78D-4EEE-B3D3-C33253154829}|..\\Dominio\\Dominio.csproj|c:\\development\\obligatorio1p22025\\dominio\\sistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E5683B6-1B88-4CD4-A7DB-2F361E5A9FF7}|..\\MVC\\MVC.csproj|c:\\development\\obligatorio1p22025\\mvc\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E5683B6-1B88-4CD4-A7DB-2F361E5A9FF7}|..\\MVC\\MVC.csproj|c:\\development\\obligatorio1p22025\\mvc\\views\\cliente\\verpasajes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E5683B6-1B88-4CD4-A7DB-2F361E5A9FF7}|..\\MVC\\MVC.csproj|c:\\development\\obligatorio1p22025\\mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,45 +28,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Development\\OBLIGATORIO1P22025\\MVC\\Views\\Login\\Login.cshtml",
-              "RelativeDocumentMoniker": "..\\MVC\\Views\\Login\\Login.cshtml",
-              "ToolTip": "C:\\Development\\OBLIGATORIO1P22025\\MVC\\Views\\Login\\Login.cshtml",
-              "RelativeToolTip": "..\\MVC\\Views\\Login\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-30T01:05:43.603Z",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Development\\OBLIGATORIO1P22025\\MVC\\Program.cs",
+              "RelativeDocumentMoniker": "..\\MVC\\Program.cs",
+              "ToolTip": "C:\\Development\\OBLIGATORIO1P22025\\MVC\\Program.cs",
+              "RelativeToolTip": "..\\MVC\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T19:18:00.297Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RegistroController.cs",
-              "DocumentMoniker": "C:\\Development\\OBLIGATORIO1P22025\\MVC\\Controllers\\RegistroController.cs",
-              "RelativeDocumentMoniker": "..\\MVC\\Controllers\\RegistroController.cs",
-              "ToolTip": "C:\\Development\\OBLIGATORIO1P22025\\MVC\\Controllers\\RegistroController.cs",
-              "RelativeToolTip": "..\\MVC\\Controllers\\RegistroController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBUAAAAkAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Pasaje.cs",
+              "DocumentMoniker": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Pasaje.cs",
+              "RelativeDocumentMoniker": "..\\Dominio\\Pasaje.cs",
+              "ToolTip": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Pasaje.cs",
+              "RelativeToolTip": "..\\Dominio\\Pasaje.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAmwEEAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T00:43:33.916Z",
+              "WhenOpened": "2025-06-01T18:33:31.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VerPasajes.cshtml",
+              "DocumentMoniker": "C:\\Development\\OBLIGATORIO1P22025\\MVC\\Views\\Cliente\\VerPasajes.cshtml",
+              "RelativeDocumentMoniker": "..\\MVC\\Views\\Cliente\\VerPasajes.cshtml",
+              "ToolTip": "C:\\Development\\OBLIGATORIO1P22025\\MVC\\Views\\Cliente\\VerPasajes.cshtml",
+              "RelativeToolTip": "..\\MVC\\Views\\Cliente\\VerPasajes.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAkwCAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T18:27:35.005Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Registro.cshtml",
-              "DocumentMoniker": "C:\\Development\\OBLIGATORIO1P22025\\MVC\\Views\\Registro\\Registro.cshtml",
-              "RelativeDocumentMoniker": "..\\MVC\\Views\\Registro\\Registro.cshtml",
-              "ToolTip": "C:\\Development\\OBLIGATORIO1P22025\\MVC\\Views\\Registro\\Registro.cshtml",
-              "RelativeToolTip": "..\\MVC\\Views\\Registro\\Registro.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAqAAAAAAAAAA==",
+              "Title": "Sistema.cs",
+              "DocumentMoniker": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Sistema.cs",
+              "RelativeDocumentMoniker": "..\\Dominio\\Sistema.cs",
+              "ToolTip": "C:\\Development\\OBLIGATORIO1P22025\\Dominio\\Sistema.cs",
+              "RelativeToolTip": "..\\Dominio\\Sistema.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAgwNABAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T17:54:27.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Development\\OBLIGATORIO1P22025\\MVC\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "..\\MVC\\Controllers\\ClienteController.cs",
+              "ToolTip": "C:\\Development\\OBLIGATORIO1P22025\\MVC\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "..\\MVC\\Controllers\\ClienteController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAiwB0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T17:51:10.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Development\\OBLIGATORIO1P22025\\MVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "..\\MVC\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Development\\OBLIGATORIO1P22025\\MVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "..\\MVC\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAACBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-30T00:44:03.848Z",
+              "WhenOpened": "2025-06-01T17:33:37.777Z",
               "EditorCaption": ""
             }
           ]

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    public class Pasaje
+    public class Pasaje : IComparable<Pasaje>
     {
         int id;
         static int ultimoId;
@@ -60,6 +60,12 @@ namespace Dominio
             ;
         }
 
+        public int CompareTo(Pasaje otro)
+        {
+            if (otro == null) return 1;
+            return this.Precio.CompareTo(otro.Precio);
+        }
+        
 
     }
 }

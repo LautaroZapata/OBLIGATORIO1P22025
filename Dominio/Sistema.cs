@@ -436,6 +436,11 @@ namespace Dominio
             return aux;
         }
 
+        public List<Vuelo> ListarVuelos()
+        {
+            return listaVuelos;
+        }
+
         public List<Pasaje> ListarPasajes(DateTime fecha1, DateTime fecha2)
         {
             if(fecha1 > fecha2 && fecha2 < fecha1) throw new Exception("La fecha 1 no puede ser mayor a la fecha 2");
@@ -453,6 +458,12 @@ namespace Dominio
                 }
             }
             return aux;
+        }
+
+        public List<Pasaje> ListarPasajes()
+        {
+            listaPasajes.Sort();  
+            return listaPasajes;
         }
         #endregion
     }
